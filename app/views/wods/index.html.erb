@@ -1,10 +1,12 @@
-<h1> Lets sweat</h1>
+<h1><%= @wod.inspect %></h1>
 <div class="row justify-content-center">
   <div class="col-sm-3">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title"><%= @wod.title %></h5>
+       <p class="card-text"><% @wod.description.each do |x| %>
+          <%= x %><br />
+        <% end %></p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
@@ -12,8 +14,8 @@
   <div class="col-sm-3">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">AMRAP</h5>
+        <p class="card-text">20 pushups <br /> 35 Jump Ropes</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
