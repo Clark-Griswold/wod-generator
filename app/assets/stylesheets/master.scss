@@ -25,3 +25,22 @@ body {
 }
 
 
+.box {
+  text-align: center;
+  margin-top: 200px;
+}
+
+#timer {
+  color: white;
+  font-size: 100px;
+  font-weight: 300;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+}
+
+button:hover {
+  cursor: pointer;
+}
