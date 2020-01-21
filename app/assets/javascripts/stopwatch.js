@@ -1,13 +1,17 @@
-function Stopwatch() {
+function Stopwatch(elem) {
+
   var time = 0;
   var interval;
   var offset;
 
   function update() {
+    if (this.isOn) {
+      time += delta();
+    }
     time += delta();
-    var formattedTime = timeFormatted(time);
+    var formattedTime = timeFormatter(time);
+    elem.textContent = formattedTime;
     
-
   }
 
 
@@ -19,7 +23,7 @@ function Stopwatch() {
   }
 
 
-  function timeFormatted(timeInMilliseconds) {
+  function timeFormatter(timeInMilliseconds) {
     var time = new Date(timeInMilliseconds);
     var minutes = time.getMinutes().toString();
     var seconds = time.getSeconds().toString();
@@ -30,7 +34,7 @@ function Stopwatch() {
     }
 
     if (seconds.length < 2) {
-      second = '0' + seconds;
+      seconds = '0' + seconds;
     }
 
     while (milliseconds.length < 3) {
@@ -41,21 +45,21 @@ function Stopwatch() {
   }
 
 
+
   this.isOn = false;
 
 
   this.start = function() {
-    if(!this.isOn) {
-      interval = setInterval(update, 10);
+    if (!this.isOn) {
+      interval = setInterval(update.bind(this), 10);
       offset = Date.now();
       this.isOn = true;
     }
-
   };
 
 
   this.stop = function() {
-    if(this.isOn) {
+    if (this.isOn) {
       clearInterval(interval);
       interval = null;
       this.isOn = false;
@@ -64,10 +68,35 @@ function Stopwatch() {
 
 
   this.reset = function() {
+    if (!this.isOn) {
     time = 0;
+    update();
+  }
   };
-
-
 }
 
 
+
+var timer = document.getElementById('timer');
+var toggleBtn = document.getElementById('toggle');
+var resetBtn = document.getElementById('reset');
+
+var watch = new Stopwatch(timer);
+
+function start() {
+  watch.start();
+  toggleBtn.textContent = 'Stop';
+}
+
+function stop() {
+  watch.stop();
+  toggleBtn.textContent = 'Start';
+}
+
+toggleBtn.addEventListener('click', function() {
+  (watch.isOn) ? stop() : start();
+});
+
+resetBtn.addEventListener('click', function() {
+  watch.reset();
+});
