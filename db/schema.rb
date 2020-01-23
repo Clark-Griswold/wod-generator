@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_021308) do
   enable_extension "plpgsql"
 
   create_table "wods", force: :cascade do |t|
+    t.string "category"
     t.string "title"
     t.text "description", default: [], array: true
     t.datetime "created_at", null: false

@@ -27,6 +27,7 @@ body {
 
 
 .box {
+  
   text-align: center;
   margin-top: 200px;
 }
@@ -37,7 +38,12 @@ body {
   font-weight: 300;
 }
 
-button {
+#reset  {
+  width: 100px;
+  height: 35px;
+}
+
+#toggle  {
   width: 100px;
   height: 35px;
 }

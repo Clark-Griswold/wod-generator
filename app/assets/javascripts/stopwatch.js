@@ -8,9 +8,10 @@ function Stopwatch(elem) {
     if (this.isOn) {
       time += delta();
     }
-    time += delta();
+    
     var formattedTime = timeFormatter(time);
     elem.textContent = formattedTime;
+    console.log(formattedTime);
     
   }
 
@@ -77,26 +78,28 @@ function Stopwatch(elem) {
 
 
 
-var timer = document.getElementById('timer');
-var toggleBtn = document.getElementById('toggle');
-var resetBtn = document.getElementById('reset');
+$(document).ready(function (){ 
+  var timer = document.getElementById('timer');
+  var toggleBtn = document.getElementById('toggle');
+  var resetBtn = document.getElementById('reset');
 
-var watch = new Stopwatch(timer);
+  var watch = new Stopwatch(timer);
 
-function start() {
-  watch.start();
-  toggleBtn.textContent = 'Stop';
-}
+  function start() {
+    watch.start();
+    toggleBtn.textContent = 'Stop';
+  }
 
-function stop() {
-  watch.stop();
-  toggleBtn.textContent = 'Start';
-}
+  function stop() {
+    watch.stop();
+    toggleBtn.textContent = 'Start';
+  }
 
-toggleBtn.addEventListener('click', function() {
-  (watch.isOn) ? stop() : start();
-});
+  toggleBtn.addEventListener('click', function() {
+    (watch.isOn) ? stop() : start();
+  });
 
-resetBtn.addEventListener('click', function() {
-  watch.reset();
+  resetBtn.addEventListener('click', function() {
+    watch.reset();
+  });
 });

@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 root 'wods#index'
 resources :wods
 resources :timers
-
+get '/heroes' => 'wods#hero_workouts'
+get '/ladies' => 'wods#lady_workouts'
 end
