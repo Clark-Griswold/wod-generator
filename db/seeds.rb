@@ -11,5 +11,5 @@ Wod.create(title: '3 Rounds for time', description: ['800 m run', '10 strict bar
 Wod.create(title: 'AMRAP 10', description: ['10 squat cleans 155/105', '10 strict hspu'])
 Wod.create(title: '3 Rounds', description: ['50 m lunges AFSAP', '1 burpee per lunge'])
 Wod.create(title: '3 Rounds', description: ['25 OHS 75/55', '15 T2B', '25/15 cal row', '15 burpee box jumps'])
-Wod.create( category: 'Murph', title: '3 Rounds', description: ['50 m lunges AFSAP', '1 burpee per lunge'])
-
+Wod.create(category: 'Heroes', title: '3 Rounds', description: ['50 m lunges AFSAP', '1 burpee per lunge'])
+Wod.create(category: 'Ladies', title: '21-15-9', description: ['thruster', 'pull-ups'])

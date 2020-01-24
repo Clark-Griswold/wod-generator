@@ -78,7 +78,8 @@ function Stopwatch(elem) {
 
 
 
-$(document).ready(function (){ 
+$(document).on('turbolinks:load',function (){ 
+
   var timer = document.getElementById('timer');
   var toggleBtn = document.getElementById('toggle');
   var resetBtn = document.getElementById('reset');
@@ -103,3 +104,6 @@ $(document).ready(function (){
     watch.reset();
   });
 });
+
+// $(document).ready(pageReady);
+// $(document).on('page:load', pageReady);
