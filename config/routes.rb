@@ -6,4 +6,5 @@ resources :wods
 resources :timers
 get '/heroes' => 'wods#hero_workouts'
 get '/ladies' => 'wods#lady_workouts'
+resources :logs
 end
