@@ -6,7 +6,7 @@ class LogsController < ApplicationController
   end
 
   def show
-    @log =Log.find(params[:id])
+    
   end
 
   def new
@@ -16,9 +16,9 @@ class LogsController < ApplicationController
   def create
     @log = Log.create(log_params)
     if @log.valid?
-      redirect_to logs_path
+      redirect_to @log
     else
-      render :new, status: :unprocessabel_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
