@@ -5,10 +5,12 @@ class WodsController < ApplicationController
   end
 
   def hero_workouts
-     @wod = Wod.where(category: 'Heroes').order("RANDOM()").first    
+     @wod = Wod.where(category: 'Heroes').order("RANDOM()").first 
+     render template: "wods/index"
   end
   
   def lady_workouts
      @wod = Wod.where(category: 'Ladies').order("RANDOM()").first
+     render template: "wods/index"
   end
 end

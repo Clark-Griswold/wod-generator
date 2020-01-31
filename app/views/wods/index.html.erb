@@ -7,7 +7,7 @@
        <p class="card-text"><% @wod.description.each do |x| %>
           <%= x %><br />
         <% end %></p>
-        <a href="#" class="btn btn-primary">Randomize</a>
+        <a href="/wods" class="btn btn-primary">Randomize</a>
       </div>
     </div>
   </div>
@@ -19,9 +19,9 @@
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Your Fate
     <span class="caret"></span></button>
     <ul class="dropdown-menu text-center">
-      <li><a href="#">Hero</a></li>
-      <li><a href="#">The Ladies</a></li>
-      <li><a href="#">Anything Goes</a></li>
+      <li><a href="/heroes">Hero</a></li>
+      <li><a href="/ladies">The Ladies</a></li>
+      <li><a href="/wods">Anything Goes</a></li>
     </ul>
   </div>
 </div>

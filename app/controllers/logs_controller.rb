@@ -3,7 +3,7 @@ class LogsController < ApplicationController
   before_action :find_log, only: [:show, :edit, :update, :destroy]  
 
   def index
-    @logs = Log.all
+    @logs = current_user.logs
   end
 
   def show
@@ -15,7 +15,7 @@ class LogsController < ApplicationController
   end
 
   def create
-    @log = Log.create(log_params)
+    @log = current_user.logs.create(log_params)
     if @log.valid?
       redirect_to @log
     else
