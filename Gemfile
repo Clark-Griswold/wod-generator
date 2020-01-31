@@ -69,3 +69,4 @@ source 'https://rails-assets.org' do
 end
 gem 'pry'
 gem 'simple_form'
+gem 'devise'
