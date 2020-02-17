@@ -1,0 +1,7 @@
+<%= simple_form_for ([@log, @log.exercises.build]) do |f| %>
+  <%= f.input :title, wrapper_html: { class: 'log_form' } %>
+  <%= f.input :sets, wrapper_html: { class: 'log_form' } %>
+  <%= f.input :reps, wrapper_html: { class: 'log_form' } %>
+  <br />
+  <%= f.submit 'Create' %>
+<% end %>

@@ -5,6 +5,13 @@
   <%= @log.length %>
 </div>
 
+<div class="worklog text-center">
+  <h2>Exercises</h2>
+  <%= render @log.exercises %>
+  <h3>Add an exercise</h3>
+  <%= render 'exercises/form' %>
+</div>
+
 <%= link_to 'Back', logs_path %>
 <%= link_to 'Edit', edit_log_path(@log) %>
 <%= link_to 'Delete', log_path(@log), method: :delete, data: {confirm: "Are you sure?"} %>
