@@ -4,7 +4,7 @@ class CreateExercises < ActiveRecord::Migration[5.2]
       t.string :title
       t.integer :sets
       t.integer :reps
-      t.references :log, foreign_key: true
+      t.references :log, index: true
 
       t.timestamps
     end
