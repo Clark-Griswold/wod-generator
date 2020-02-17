@@ -1,4 +1,5 @@
 class Log < ApplicationRecord
+  
   belongs_to :user
   validates :date, presence: true
   validates :workout, presence: true

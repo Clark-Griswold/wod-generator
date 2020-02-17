@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -30,9 +31,14 @@
               <li class="nav-item">
                  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
               </li>
+              <li class="nav-item">
+                <%= link_to 'New Workout', new_log_path, class:'nav-link' %>
+              </li>
             <% else %>
-            <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">LogIn</a>
-            <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Register</a>
+
+            <a href="" id="logIn" class="btn btn-default btn-rounded my-3"  data-toggle="modal" data-target="#modalLRForm">LogIn</a>
+            <a href="" id="register" class="btn btn-default btn-rounded my-3"  data-toggle="modal" data-target="#modalLRForm">Register</a>
+
               <li class="nav-item">
                 <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
               </li>

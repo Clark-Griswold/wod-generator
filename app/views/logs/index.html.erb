@@ -1,11 +1,12 @@
 <h1>Your Workouts</h1>
 <% @logs.each do |log| %>
   <h2 class=" worklog text-center">
-    <%=  log.date.strftime("%A %B %d") %><br />
+    <%= link_to log.date.strftime("%A %B %d"), log %><br />
     <%= log.workout %><br />
-    <%= log.mood %><br />
-    <%= log.length %><br /><br />
+    <!--<%= log.mood %><br />
+    <%= log.length %><br /><br /> -->
   </h2>
+  <br />
 <% end %>
 
   

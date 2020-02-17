@@ -3,7 +3,7 @@ class LogsController < ApplicationController
   before_action :find_log, only: [:show, :edit, :update, :destroy]  
 
   def index
-    @logs = current_user.logs
+    @logs = current_user.logs.order("created_at DESC")
   end
 
   def show
@@ -27,7 +27,18 @@ class LogsController < ApplicationController
   end
 
   def update
+    if @log.update(log_params)
+      redirect_to @log
+    else
+      render 'edit'
+    end
   end
+
+  def destroy
+    @log.destroy
+    redirect_to logs_path
+  end
+
 
   private
 

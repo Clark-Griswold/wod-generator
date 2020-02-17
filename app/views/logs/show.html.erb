@@ -4,3 +4,7 @@
   <%= @log.mood %><br />
   <%= @log.length %>
 </div>
+
+<%= link_to 'Back', logs_path %>
+<%= link_to 'Edit', edit_log_path(@log) %>
+<%= link_to 'Delete', log_path(@log), method: :delete, data: {confirm: "Are you sure?"} %>
