@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 
 body {
   background: image_url('weights.jpg') no-repeat center center fixed;
@@ -59,3 +60,25 @@ button:hover {
 .log_form {
   color: white;
 }
+
+.card-title {
+  font-family: 'Lacquer', ;
+}
+
+.card-text {
+  font-family: 'Lacquer', ;
+}
+
+.better-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  opacity: 0.8;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebe #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  color: white;
+}
+
