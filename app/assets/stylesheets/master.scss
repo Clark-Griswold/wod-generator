@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 
 body {
   background: image_url('weights.jpg') no-repeat center center fixed;
@@ -30,13 +31,15 @@ body {
 .box {
   
   text-align: center;
-  margin-top: 200px;
+  margin-top: 140px;
 }
 
 #timer {
+  font-family: 'Roboto', ;
+  font-family: 'Open Sans', ;
   color: white;
-  font-size: 100px;
-  font-weight: 300;
+  font-size: 105px;
+  font-weight: 150;
 }
 
 #reset  {
