@@ -5,10 +5,10 @@
   <%= @log.length %>
 </div>
 
-<div class="worklog text-center">
+<div class="worklog">
   <h2>Exercises</h2>
-  <%= render @log.exercises %>
-  <h3>Add an exercise</h3>
+  <%= render 'exercises/exercise' %>
+  <h3 class="text-center">Add an exercise</h3>
   <%= render 'exercises/form' %>
 </div>
 

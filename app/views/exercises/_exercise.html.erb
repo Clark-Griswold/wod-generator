@@ -1,5 +1,25 @@
-<div class="worklog text-center">
-  <%= exercise.title %><br />
-  <%= exercise.sets %><br />
-  <%= exercise.reps %>
-</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Exercise</th>
+      <th scope="col">Sets</th>
+      <th scope="col">Reps</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @log.exercises.each do |exercise| %>
+    <tr>
+     
+      
+
+      <td><%= exercise.title %></td>
+       <td><%= exercise.sets %></td>
+      <td><%= exercise.reps %></td>
+    </tr>
+    <% end %>
+    
+  </tbody>
+</table>

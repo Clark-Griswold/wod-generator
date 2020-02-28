@@ -1,4 +1,5 @@
-<h1>Your Workouts</h1>
+<h1 class="logtitle">Your Workouts</h1>
+<br />
 <% @logs.each do |log| %>
   <h2 class=" worklog text-center">
     <%= link_to log.date.strftime("%A %B %d"), log %><br />
