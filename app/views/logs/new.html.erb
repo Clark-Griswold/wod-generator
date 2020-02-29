@@ -1,4 +1,5 @@
-<h1>New Workout Log</h1>
+<h1 class="new-workout text-center">New Workout Log</h1>
+<div class=" entry col-8 offset-2">
 <%= simple_form_for @log do |f| %>
   <%= f.input :date, wrapper_html: { class: 'log_form' } %>
   <%= f.input :workout, label: 'What did you workout?', wrapper_html: { class: 'log_form' } %>
@@ -6,4 +7,5 @@
   <%= f.input :length, label: 'How long was the workout?', wrapper_html: { class: 'log_form' } %>
   <%= f.submit 'Create' %>
 <% end %>
+</div>
 

@@ -1,9 +1,8 @@
 
 
-<table class="table">
+<table class="table table-bordered">
   <thead>
-    <tr>
-      
+    <tr class="table-head">
       <th scope="col">Exercise</th>
       <th scope="col">Sets</th>
       <th scope="col">Reps</th>
@@ -11,15 +10,11 @@
   </thead>
   <tbody>
      <% @log.exercises.each do |exercise| %>
-    <tr>
-     
-      
-
+     <tr>
       <td><%= exercise.title %></td>
-       <td><%= exercise.sets %></td>
+      <td><%= exercise.sets %></td>
       <td><%= exercise.reps %></td>
     </tr>
-    <% end %>
-    
+    <% end %> 
   </tbody>
 </table>
