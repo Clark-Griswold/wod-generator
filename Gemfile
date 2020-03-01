@@ -70,3 +70,6 @@ end
 gem 'pry'
 gem 'simple_form'
 gem 'devise'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
