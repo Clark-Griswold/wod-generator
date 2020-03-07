@@ -5,12 +5,9 @@
       <div class="card-body text-center">
         <h5 class="card-title"><%= @wod.title %></h5>
        <p class="card-text"><% @wod.description.each do |x| %>
-          <% if x.scan("run").length > 0 %>
-            weather is xxx <br />
-          <% end %> 
           <%= x %><br />
         <% end %></p>
-        <a href="/wods" class="btn btn-primary">Randomize</a>
+        <a href="/ladies" class="btn btn-primary">Randomize</a>
       </div>
     </div>
   </div>

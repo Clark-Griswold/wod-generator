@@ -6,11 +6,11 @@ class WodsController < ApplicationController
 
   def hero_workouts
      @wod = Wod.where(category: 'Heroes').order("RANDOM()").first 
-     render template: "wods/index"
+     render template: "wods/heroes"
   end
   
   def lady_workouts
      @wod = Wod.where(category: 'Ladies').order("RANDOM()").first
-     render template: "wods/index"
+     render template: "wods/ladies"
   end
 end
