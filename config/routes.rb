@@ -7,6 +7,7 @@ resources :wods
 resources :timers
 get '/heroes' => 'wods#hero_workouts'
 get '/ladies' => 'wods#lady_workouts'
+get 'weather', to: 'wods#weather'
 resources :logs do
   resources :exercises
 end

@@ -13,4 +13,8 @@ class WodsController < ApplicationController
      @wod = Wod.where(category: 'Ladies').order("RANDOM()").first
      render template: "wods/ladies"
   end
+
+  def weather
+    render template: "wods/weather"
+  end
 end
