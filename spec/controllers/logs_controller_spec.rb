@@ -30,6 +30,8 @@ RSpec.describe LogsController, type: :controller do
       log = Log.last
       expect(log.workout).to eq("chest")
     end
+
+  
   end
 
   describe "logs#edit action" do
