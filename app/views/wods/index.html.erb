@@ -6,7 +6,9 @@
         <h5 class="card-title"><%= @wod.title %></h5>
        <p class="card-text"><% @wod.description.each do |x| %>
           <% if x.scan("run").length > 0 %>
-            weather is xxx <br />
+           <a href="/weather" target="_blank">
+              Check Your Weather <br />
+            </a>
           <% end %> 
           <%= x %><br />
         <% end %></p>

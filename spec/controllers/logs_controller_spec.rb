@@ -25,8 +25,8 @@ RSpec.describe LogsController, type: :controller do
     it "should successfully create a new log in the database" do
       user = FactoryBot.create(:user)
       sign_in user
-      post :create, params: { log: { workout: "chest" } }
-      expect(response).to redirect_to @log
+      post :create, params: { log: {  date: Date.today , workout: "chest", mood: "tired", length: "45 minutes" } }
+      expect(response).to redirect_to log_path(Log.last)
       log = Log.last
       expect(log.workout).to eq("chest")
     end
@@ -34,7 +34,11 @@ RSpec.describe LogsController, type: :controller do
 
   describe "logs#edit action" do
     it "should show the edit form for a log" do
+      #log = FactoryBot.create(:log)
+      #log = Log.create( date: Date.today , workout: "chest", mood: "tired", length: "45 minutes" )
       user = FactoryBot.create(:user)
+       log = user.logs.create( date: Date.today , workout: "chest", mood: "tired", length: "45 minutes" )
+
       sign_in user
       get :edit, params: { id: log.id}
       expect(response).to have_http_status(:success)

@@ -6,4 +6,11 @@ FactoryBot.define do
     password { "secretpassword" }
     password_confirmation { "secretpassword" }
   end
+
+   factory :log do
+    date {Date.today}
+    workout {"chest"}
+    mood {"tired"}
+    length {"45 minutes"}
+  end
 end

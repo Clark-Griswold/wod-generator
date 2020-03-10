@@ -103,3 +103,40 @@ button:hover {
 .new-workout {
   color: white;
 }
+
+#cityDiv {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+
+}
+
+#submitCity {
+   font-family: 'Lacquer', ;
+}
+
+#city {
+   font-family: 'Lacquer', ;
+}
+
+#errorCity {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#showWeather {
+  width: 60%;
+  margin: auto;
+  background-color: #4aa1f3;
+  color: white;
+  border-radius: 25px;
+}
+
+.jumbotron {
+  background-color: #4aa1f3;
+}
+
+.jumboBanner {
+  color: white;
+}
