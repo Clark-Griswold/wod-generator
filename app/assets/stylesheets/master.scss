@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+@import "font-awesome";
 
 * {
   font-family: 'Lacquer', ;
@@ -128,15 +129,20 @@ button:hover {
 #showWeather {
   width: 60%;
   margin: auto;
+  margin-top: 15px;
   background-color: #4aa1f3;
   color: white;
   border-radius: 25px;
+  opacity: 0.75;
 }
 
 .jumbotron {
   background-color: #4aa1f3;
+  opacity: 0.75;
+  color: white;
 }
 
 .jumboBanner {
   color: white;
 }
+

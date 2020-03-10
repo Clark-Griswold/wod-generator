@@ -7,7 +7,7 @@
        <p class="card-text"><% @wod.description.each do |x| %>
           <% if x.scan("run").length > 0 %>
            <a href="/weather" target="_blank">
-              Check Your Weather <br />
+              A run!! Check the Weather <br />
             </a>
           <% end %> 
           <%= x %><br />
